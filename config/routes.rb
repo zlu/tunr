@@ -1,4 +1,9 @@
 Tunr::Application.routes.draw do
+  resources :users, only: [:new, :create]
+  get 'sessions/new' => 'sessions#new'
+  post 'sessions' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
