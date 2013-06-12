@@ -1,5 +1,5 @@
 Tunr::Application.routes.draw do
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :index, :destroy]
   get 'sessions/new' => 'sessions#new'
   post 'sessions' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

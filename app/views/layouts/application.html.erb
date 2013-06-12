@@ -9,7 +9,10 @@
 <body>
 
 <% if current_user %>
-	<%= current_user.name %>
+	<%= current_user.name %><br>
+	<% if current_user.admin? %>
+		<%= link_to 'users', users_path %>
+	<% end %>
 	<%= link_to 'logout', logout_path, method: :delete %><br>
 <% end %>
 
